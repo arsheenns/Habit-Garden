@@ -58,9 +58,7 @@ Growth stage is derived directly from streak length:
 - `1–6` → sprout
 - `7+` → bloom (and `milestone: true`, which triggers the frontend's confetti)
 
-## Notes / what's intentionally left out (v1 scope)
-
-This is a trimmed MVP — no streak-freeze grace day, currency, rarity tiers,
-achievements, or companion character yet. The session secret in `server.js`
+## Notes 
+ The session secret in `server.js`
 is a placeholder — fine for local/demo use, change it before deploying
 anywhere real.
