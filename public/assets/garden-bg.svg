@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#BCE6F7"/>
+      <stop offset="100%" stop-color="#EAF7F9"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="800" height="400" fill="url(#sky)"/>
+
+  <!-- sun -->
+  <circle cx="700" cy="70" r="55" fill="#F6DE8E" opacity="0.5"/>
+  <circle cx="700" cy="70" r="38" fill="#F5D46B"/>
+
+  <!-- clouds -->
+  <g fill="#FFFFFF" opacity="0.9">
+    <rect x="120" y="55" width="90" height="18" rx="9"/>
+    <rect x="140" y="42" width="55" height="18" rx="9"/>
+    <rect x="400" y="40" width="80" height="16" rx="8"/>
+    <rect x="418" y="28" width="45" height="16" rx="8"/>
+  </g>
+
+  <!-- background hill (jagged) -->
+  <polygon fill="#9FD37A" points="
+    0,260 40,250 80,258 120,244 160,252 200,238 240,248 280,236
+    320,246 360,232 400,242 440,230 480,240 520,228 560,238
+    600,226 640,236 680,224 720,234 760,222 800,232
+    800,400 0,400" />
+
+  <!-- foreground hill / grass (jagged, darker) -->
+  <polygon fill="#69B24E" points="
+    0,320 40,308 90,316 130,300 180,310 230,296 280,306
+    330,292 380,302 430,288 480,298 540,286 590,296
+    640,282 690,292 740,280 800,290
+    800,400 0,400" />
+
+  <!-- winding path -->
+  <polygon fill="#E4D2A3" points="
+    340,400 300,340 330,300 380,280 420,300 400,340 440,400" />
+
+  <!-- left tree -->
+  <g>
+    <rect x="66" y="290" width="14" height="46" fill="#7A5230"/>
+    <circle cx="73" cy="256" r="42" fill="#4F8F4A"/>
+    <circle cx="52" cy="270" r="30" fill="#5A9F52"/>
+    <circle cx="96" cy="272" r="28" fill="#5A9F52"/>
+  </g>
+
+  <!-- right tree -->
+  <g>
+    <rect x="716" y="270" width="14" height="46" fill="#7A5230"/>
+    <circle cx="723" cy="238" r="40" fill="#4F8F4A"/>
+    <circle cx="702" cy="252" r="28" fill="#5A9F52"/>
+    <circle cx="746" cy="254" r="26" fill="#5A9F52"/>
+  </g>
+
+  <!-- scattered flowers -->
+  <g>
+    <circle cx="150" cy="360" r="5" fill="#E2618F"/>
+    <circle cx="165" cy="366" r="4" fill="#F4C15C"/>
+    <circle cx="520" cy="352" r="5" fill="#7C6FE0"/>
+    <circle cx="535" cy="360" r="4" fill="#F08FB0"/>
+    <circle cx="600" cy="372" r="5" fill="#F4C15C"/>
+    <circle cx="230" cy="380" r="4" fill="#6FA8DC"/>
+    <circle cx="245" cy="386" r="4" fill="#E2618F"/>
+    <circle cx="650" cy="384" r="4" fill="#E2618F"/>
+  </g>
+</svg>

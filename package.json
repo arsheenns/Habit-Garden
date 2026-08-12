@@ -1,0 +1,16 @@
+{
+  "name": "habit-garden",
+  "version": "1.0.0",
+  "description": "A habit tracker that grows a virtual garden as you build streaks",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.10.0",
+    "bcryptjs": "^2.4.3",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0"
+  }
+}

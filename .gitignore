@@ -1,0 +1,4 @@
+node_modules/
+habitgarden.db
+habitgarden.db-shm
+habitgarden.db-wal

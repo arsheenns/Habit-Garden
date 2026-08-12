@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Habit Garden</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Space+Mono:wght@400;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===================== AUTH SCREEN ===================== -->
+<section id="auth-screen" class="screen active">
+  <div class="auth-card">
+    <div class="brandmark">
+      <img src="assets/leaf.svg" class="pixel-icon" alt="" />
+      <span class="brand-word">Habit Garden</span>
+    </div>
+    <p class="auth-tagline" id="auth-tagline">Welcome back! Ready to tend to your digital garden today?</p>
+
+    <form id="auth-form">
+      <label for="auth-username">Username</label>
+      <div class="field-wrap">
+        <svg class="field-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input type="text" id="auth-username" placeholder="GardenerName" autocomplete="username" required />
+      </div>
+
+      <label for="auth-password">Password</label>
+      <div class="field-wrap">
+        <svg class="field-icon" viewBox="0 0 24 24" fill="none"><circle cx="8" cy="15" r="4" stroke="currentColor" stroke-width="2"/><path d="M11 12l9-9M17 3l3 3M14 6l2.5 2.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input type="password" id="auth-password" placeholder="••••••••" autocomplete="current-password" required />
+      </div>
+
+      <p id="auth-error" class="error-text"></p>
+      <div class="forgot-row"><a href="#" tabindex="-1">Forgot Password?</a></div>
+
+      <button type="submit" class="btn btn-primary btn-block" id="auth-submit">LOGIN TO GARDEN <span aria-hidden="true">&#8594;</span></button>
+    </form>
+
+    <button type="button" class="btn btn-ghost btn-block" id="auth-switch-link">PLANT A NEW ACCOUNT</button>
+    <p class="hint">Demo login — username: <b>demo</b>, password: <b>demo1234</b></p>
+  </div>
+</section>
+
+<!-- ===================== APP SHELL ===================== -->
+<section id="app-screen" class="screen">
+
+  <header class="topbar">
+    <div class="brandmark small">
+      <img src="assets/leaf.svg" class="pixel-icon" alt="" />
+      <span class="brand-word">Habit Garden</span>
+    </div>
+    <nav class="app-nav">
+      <button class="nav-tab active" data-target="today-view">Today</button>
+      <button class="nav-tab" data-target="garden-view">Garden</button>
+      <button class="nav-tab" data-target="settings-view">Settings</button>
+    </nav>
+    <button class="avatar-btn" id="profile-btn" aria-label="Account" data-target="settings-view">
+      <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </header>
+
+  <main class="app-main">
+
+    <!-- ---------- TODAY ---------- -->
+    <div id="today-view" class="view active">
+      <div class="today-header">
+        <h1>Today</h1>
+        <p id="today-date"></p>
+      </div>
+
+      <div class="card goal-card">
+        <div class="goal-row">
+          <span class="goal-label">Daily Goal</span>
+          <span class="goal-count" id="goal-count"></span>
+        </div>
+        <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+        <p class="goal-caption" id="goal-caption"></p>
+      </div>
+
+      <div id="habit-list" class="habit-list"></div>
+
+      <div class="card seed-card">
+        <h2>Plant a New Seed</h2>
+        <form id="add-habit-form" class="add-row">
+          <input type="text" id="add-habit-input" placeholder="New habit name..." required />
+          <button type="submit" class="btn btn-primary">+ ADD HABIT</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- ---------- GARDEN ---------- -->
+    <div id="garden-view" class="view">
+      <div class="garden-header">
+        <h1>My Garden</h1>
+        <p>Watch your habits bloom. Every streak nourishes your personal garden. Keep up the good work!</p>
+      </div>
+
+      <div class="garden-scene">
+        <img src="assets/garden-bg.svg" class="garden-bg" alt="" />
+        <div class="garden-title">Habit&nbsp;Garden</div>
+        <div class="plant-slots" id="plant-slots"></div>
+      </div>
+
+      <p class="empty-hint" id="garden-empty-hint" style="display:none;">Plant your first seed on the Today tab to start growing your garden.</p>
+    </div>
+
+    <!-- ---------- SETTINGS ---------- -->
+    <div id="settings-view" class="view">
+      <div class="today-header">
+        <h1>Settings</h1>
+        <p>Manage your gardener account</p>
+      </div>
+
+      <div class="card">
+        <h2>Account</h2>
+        <p class="settings-username" id="settings-username"></p>
+        <button class="btn btn-outline" id="logout-btn">Log out</button>
+      </div>
+    </div>
+
+  </main>
+</section>
+
+<div id="celebrate-layer"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
